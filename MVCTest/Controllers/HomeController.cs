@@ -15,16 +15,14 @@ namespace WebApplication1.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = new HtmlString("<b>Your application description page.</b>");
-            Session["test"] = "Oleg2";
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            var yourName = Session["test"];
-            ViewBag.Message = $"Your contact page - {yourName}. {DateTime.Now:dd.MM.yyyy}";
+            ViewBag.Message = $"Your contact page - {DateTime.Now:dd.MM.yyyy}";
 
             return View();
         }
